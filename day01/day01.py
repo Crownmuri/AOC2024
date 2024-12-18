@@ -18,6 +18,13 @@ def getLocationID():
         array1 = np.array(lstx).astype(int)
         array2 = np.array(lsty).astype(int)
         array3 = abs(array1 - array2)
-        print(sum(array3))
+        print(sum(array3)) # Star Get
+
+                
+        arraydiff1 = np.setdiff1d(array1,array2)
+        arraydiff2 = np.setdiff1d(array2,array1)
+        arraydup1 = array1[~np.isin(array1,arraydiff1)]
+        arraydup2 = array2[~np.isin(array2,arraydiff2)]
+        print(sum(arraydup2)) # Star Get
         
 getLocationID()
