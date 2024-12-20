@@ -17,6 +17,12 @@ def getXMAS():
     XMAS19 = len(re.findall("(?=(S[A-Z\n.]{139}A[A-Z\n.]{139}M[A-Z\n.]{139}X))",output))
     XMAS37 = len(re.findall("(?=(S[A-Z\n.]{141}A[A-Z\n.]{141}M[A-Z\n.]{141}X))",output))
     XMAScount = XMAS46+XMAS82+XMAS91+XMAS73+XMAS64+XMAS28+XMAS19+XMAS37
-    print (XMAScount)
+    print (XMAScount) # Star Get
+    MSAMS = len(re.findall("(?=(M[A-Z]{1}S[A-Z\n.]{139}A[A-Z\n.]{139}M[A-Z]{1}S))",output))
+    MMASS = len(re.findall("(?=(M[A-Z]{1}M[A-Z\n.]{139}A[A-Z\n.]{139}S[A-Z]{1}S))",output))
+    SSAMM = len(re.findall("(?=(S[A-Z]{1}S[A-Z\n.]{139}A[A-Z\n.]{139}M[A-Z]{1}M))",output))
+    SMASM = len(re.findall("(?=(S[A-Z]{1}M[A-Z\n.]{139}A[A-Z\n.]{139}S[A-Z]{1}M))",output))
+    MAScount = MSAMS + MMASS + SSAMM + SMASM
+    print (MAScount) # Star Get
     
 getXMAS()
